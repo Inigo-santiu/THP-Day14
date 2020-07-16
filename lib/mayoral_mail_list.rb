@@ -16,14 +16,11 @@ def get_townhall_urls
   mayoral_page = Nokogiri::HTML(URI.open("https://www.annuaire-des-mairies.com/val-d-oise.html"))
   valdoise_array = []
   mayoral_page.xpath('//p/a/@href').each do |villes|
+    
     villes_url = "https://www.annuaire-des-mairies.com" + villes.text.delete_prefix(".")
     valdoise_array << villes_url
   end
-  mayoral_page.xpath()
-  presentation = Hash[???.zip(valdoise_array)]
-
-
-
+  #print villes.text
   return valdoise_array
 end
 
