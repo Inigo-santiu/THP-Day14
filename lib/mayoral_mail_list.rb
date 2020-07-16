@@ -13,7 +13,7 @@ def get_townhall_email(townhall_url)
       cities_array << cities.text
     
     presentation = Hash[cities_array.zip(email_array)]
-    print presentation
+    p presentation
     end
   end
 end

@@ -6,3 +6,9 @@ describe 'crypto_scrapper' do
 
   end
 end
+
+describe 'crypto_scrapper' do
+  it 'should contain the currency BTC' do
+    expect(crypto_scrapper).to have_key("BTC")
+  end
+end
